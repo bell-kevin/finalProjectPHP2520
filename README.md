@@ -1,5 +1,7 @@
 # Final Project Instructions
 
+Textbook: PHP and MySQL for Dynamic Web Sites: Visual QuickPro Guide (5th Edition) Written by Larry Ullman
+
 Thoroughly read all of the instructions on this page before beginning your project.
 
 See an instructor to ensure that you completely understand the Final Project for this course, and to discuss the details of the project you plan to create. Make sure to have instructor approval, then complete the project.
