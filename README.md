@@ -24,7 +24,7 @@ If you can't think of anything else, use the Pacific Trails site. Convert the ex
 
 - Two night minimum March through October & all weekends.
 
-- Yurts cost $180.00 a night
+- Yurts cost $180.00 per night
 
 - There are 5 Yurts, each has 1 queen bed
 
