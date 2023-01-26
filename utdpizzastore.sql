@@ -95,3 +95,39 @@ INSERT INTO customers (fname, lname, email, contactNo, password, verpassword, ad
 
 INSERT INTO customers (fname, lname, email, contactNo, password, verpassword, addline1, addline2, zipcode, city, state, country) VALUES
 ('Jessica', 'Squire', 'jessicasquire@example.com', '555-555-5560', 'password', 'password', '333 Cedar St', '', '09876', 'Seattle', 'WA', 'USA');
+
+CREATE TABLE pizzas (
+    PizzaID INT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Description VARCHAR(255) NOT NULL,
+    Price DECIMAL(10,2) NOT NULL
+);
+
+CREATE TABLE toppings (
+    ToppingID INT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Price DECIMAL(10,2) NOT NULL
+);
+
+CREATE TABLE pizza_toppings (
+    id INT PRIMARY KEY,
+    topping VARCHAR(255) NOT NULL,
+    price DECIMAL(5,2) NOT NULL
+);
+
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT NOT NULL,
+    order_date DATE NOT NULL,
+    total_price DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+
+CREATE TABLE order_items (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES orders (id),
+    FOREIGN KEY (product_id) REFERENCES products (id)
+);
