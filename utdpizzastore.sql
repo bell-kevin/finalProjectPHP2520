@@ -3,7 +3,7 @@ CREATE DATABASE utdpizzastore;
 USE utdpizzastore;
 
 CREATE TABLE customers (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
     fname VARCHAR(255) NOT NULL,
     lname VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
@@ -131,3 +131,16 @@ CREATE TABLE order_items (
     FOREIGN KEY (order_id) REFERENCES orders (id),
     FOREIGN KEY (product_id) REFERENCES products (id)
 );
+
+INSERT INTO pizzas (name, price, description)
+VALUES 
+("Margherita", 12.99, "tomato sauce, mozzarella, fresh basil"),
+("Pepperoni", 14.99, "tomato sauce, mozzarella, pepperoni"),
+("Vegetarian", 16.99, "tomato sauce, mozzarella, bell peppers, onions, mushrooms"),
+("Meat Lover's", 18.99, "tomato sauce, mozzarella, pepperoni, sausage, bacon, ground beef"),
+("BBQ Chicken", 15.99, "barbecue sauce, mozzarella, grilled chicken, onions, cilantro"),
+("Seafood", 17.99, "tomato sauce, mozzarella, shrimp, crab meat, scallops, parsley"),
+("Tropical", 16.99, "pineapple, ham, bacon, mozzarella"),
+("Four Cheese", 16.99, "mozzarella, parmesan, gouda, blue cheese"),
+("Buffalo Chicken", 15.99, "buffalo sauce, mozzarella, grilled chicken, blue cheese"),
+("Spicy Italian", 16.99, "tomato sauce, mozzarella, pepperoni, jalapenos, red pepper flakes");
