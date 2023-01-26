@@ -132,15 +132,16 @@ CREATE TABLE order_items (
     FOREIGN KEY (product_id) REFERENCES products (id)
 );
 
-INSERT INTO pizzas (name, price, description)
-VALUES 
-("Margherita", 12.99, "tomato sauce, mozzarella, fresh basil"),
-("Pepperoni", 14.99, "tomato sauce, mozzarella, pepperoni"),
-("Vegetarian", 16.99, "tomato sauce, mozzarella, bell peppers, onions, mushrooms"),
-("Meat Lover's", 18.99, "tomato sauce, mozzarella, pepperoni, sausage, bacon, ground beef"),
-("BBQ Chicken", 15.99, "barbecue sauce, mozzarella, grilled chicken, onions, cilantro"),
-("Seafood", 17.99, "tomato sauce, mozzarella, shrimp, crab meat, scallops, parsley"),
-("Tropical", 16.99, "pineapple, ham, bacon, mozzarella"),
-("Four Cheese", 16.99, "mozzarella, parmesan, gouda, blue cheese"),
-("Buffalo Chicken", 15.99, "buffalo sauce, mozzarella, grilled chicken, blue cheese"),
-("Spicy Italian", 16.99, "tomato sauce, mozzarella, pepperoni, jalapenos, red pepper flakes");
+INSERT INTO pizzas (PizzaID, Name, Description, Price) VALUES (1, 'Pepperoni', 'Classic pepperoni pizza with mozzarella cheese', 14.99);
+INSERT INTO pizzas (PizzaID, Name, Description, Price) VALUES (2, 'Margherita', 'Fresh tomato, mozzarella, and basil', 12.99);
+INSERT INTO pizzas (PizzaID, Name, Description, Price) VALUES (3, 'BBQ Chicken', 'Grilled chicken, red onion, cilantro, and BBQ sauce', 16.99);
+INSERT INTO pizzas (PizzaID, Name, Description, Price) VALUES (4, 'Veggie', 'Mushrooms, bell peppers, onions, and black olives', 13.99);
+INSERT INTO pizzas (PizzaID, Name, Description, Price) VALUES (5, 'Meat Lovers', 'Pepperoni, sausage, bacon, and beef', 17.99);
+INSERT INTO pizzas (PizzaID, Name, Description, Price) VALUES (6, 'Seafood', 'Shrimp, crabmeat, and garlic butter sauce', 19.99);
+INSERT INTO pizzas (PizzaID, Name, Description, Price) VALUES (7, 'Hawaiian', 'Ham, pineapple, and extra mozzarella', 15.99);
+INSERT INTO pizzas (PizzaID, Name, Description, Price) VALUES (8, 'Spicy Sausage', 'Spicy sausage, banana peppers, and mozzarella', 16.99);
+INSERT INTO pizzas (PizzaID, Name, Description, Price) VALUES (9, 'Mediterranean', 'Spinach, feta, tomato, and black olives', 14.99);
+INSERT INTO pizzas (PizzaID, Name, Description, Price) VALUES (10, 'Buffalo Chicken', 'Grilled chicken, buffalo sauce, and blue cheese', 17.99);
+INSERT INTO pizzas (PizzaID, Name, Description, Price) VALUES (11, 'Funghi', 'Tomato sauce, mozzarella, mushrooms, and truffle oil', 16.99);
+INSERT INTO pizzas (PizzaID, Name, Description, Price) VALUES (12, 'Quattro Formaggi', 'Tomato sauce, mozzarella, gorgonzola, parmesan, and ricotta', 18.99);
+INSERT INTO pizzas (PizzaID, Name, Description, Price) VALUES (13, 'Capricciosa', 'Tomato sauce, mozzarella, ham, mushrooms, artichokes, and olives', 20.99);
