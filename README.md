@@ -64,6 +64,8 @@ You will need to set up your site to run on your USB drive or your ePortfolio si
 
 ![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/points.PNG)
 
+## Screenshots
+
 ![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/1.PNG)
 
 ![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/2.PNG)
