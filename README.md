@@ -64,6 +64,43 @@ You will need to set up your site to run on your USB drive or your ePortfolio si
 
 ![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/points.PNG)
 
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/1.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/2.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/3.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/4.PNG)
+
+![p]https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/5.PNG()
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/6.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/7.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/8.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/9.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/10.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/11.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/12.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/13.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/14.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/15.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/16.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/17.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/18.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/19.PNG)
 
 == We're Using GitHub Under Protest ==
 
