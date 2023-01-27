@@ -102,6 +102,12 @@ You will need to set up your site to run on your USB drive or your ePortfolio si
 
 ![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/19.PNG)
 
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/20.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/21.PNG)
+
+![p](https://github.com/bell-kevin/finalProjectPHP2520/blob/main/finalProjectPHP/screenshots/22.PNG)
+
 == We're Using GitHub Under Protest ==
 
 This project is currently hosted on GitHub.  This is not ideal; GitHub is a
