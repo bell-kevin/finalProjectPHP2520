@@ -1,0 +1,451 @@
+bellkevin@pm.me
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <style type="text/css">
+
+
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- MODAL -->
+    <div class="modal fade" id="all" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add to Cart?</h4>
+                </div>
+                <div class="modal-body">
+                    <h4>Enter Product's unique ID which is written just above every product.<br>Are you sure you want to add this product to cart?</h4>
+                    <p>Note: Added products can't be furthur removed from the cart. We are working on it.</p>
+
+                    <form method="post" action="cart_added.php">
+                        <input type="text" class="form-control" placeholder="Product Unique ID" name="prodno" /><br>
+                        <center>
+                            <button class="btn btn-primary" type="submit" value="button" name="button">Add to Cart</button>
+                        </center>
+                    </form>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- MODAL ENDS -->
+
+
+</body>
+
+</html> how do i automatically get the product number input into the cart, rather than how i have it now where i have to type the product number?
+You can automatically get the product number input into the cart by using JavaScript to grab the product number from the page and set it as the value of the input field in the form before the form is submitted.
+
+One way to do this would be to add an event listener to the "Add to Cart" button that listens for when it is clicked, and then retrieves the product number from the page and sets it as the value of the input field in the form.
+
+You could also pass the product number as a parameter when the "Add to Cart" button is clicked, and then in javascript use the passed parameter to set the value of the input field in the form.
+
+Another way would be to use a hidden input field on the product page and set the value of the product number to that field and then when the modal is shown you can get that value and use it to set the value of the input field in the form.
+
+You can also use session storage or cookies to store the product number and then retrieve it when the modal is shown and set the value of the input field in the form.
+
+
+
+
+bellkevin@pm.me
+i want to keep the modal.
+If you want to keep the modal and still automatically populate the product number input field, you can use JavaScript to retrieve the product number from the page and set it as the value of the input field when the modal is opened.
+
+One way to do this would be to add an event listener to the modal's "show" event, which is triggered when the modal is opened. Inside the event listener, you can retrieve the product number from the page and set it as the value of the input field in the form.
+
+Another way would be to add a data attribute to the button that opens the modal and store the product number as the value of that attribute. Then, when the modal is opened, you can retrieve the value of that data attribute and set it as the value of the input field in the form.
+
+You can also use session storage or cookies to store the product number when the user clicks on the product and then retrieve it when the modal is opened and set the value of the input field in the form.
+
+You can also pass the product number as a parameter when the button is clicked, and then in javascript use the passed parameter to set the value of the input field in the form before the modal is shown.
+
+
+
+
+bellkevin@pm.me
+which way is the fewest lines of code?
+The way to achieve this with the fewest lines of code would be to pass the product number as a parameter when the button is clicked and then using javascript to set the value of the input field in the form before the modal is shown.
+
+You can add the product number as a data attribute to the button that opens the modal, and then in javascript, you can retrieve the value of that data attribute and set it as the value of the input field in the form.
+
+Here is an example of how you can do this with minimal lines of code:
+
+HTML:
+
+html
+Copy code
+<button class="btn btn-primary" data-product-number="123" data-toggle="modal" data-target="#all">Add to Cart</button>
+JavaScript:
+
+js
+Copy code
+$('#all').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget); // Button that triggered the modal
+  var productNumber = button.data('product-number'); // Extract info from data-* attributes
+  // Update the modal's input field with the product number
+  $(this).find('input[name="prodno"]').val(productNumber);
+});
+This way, you don't need to store the product number in a session storage or cookies and use extra lines of code to retrieve it when the modal is opened.
+
+
+
+
+bellkevin@pm.me
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>E-Store |s Electronic Goods Dealers</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<style type="text/css">
+
+
+	</style>
+</head>
+
+<body style="font-family: Montserrat">
+	<?php
+	if (!isset($_SESSION['id'])) {
+		require 'header_logged_out.php';
+	?>
+
+
+
+		<!-- 1 PANNEL FOR LOGGED IN USERS-->
+		<div class="container" style="margin-top: 80px; margin-bottom: 100px">
+			<div class="row row-style-login-page-pannel">
+				<div class=" col-md-4 col-sm-6 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Mobile 1</div>
+						<div class="panel-body">
+							<!--put mobile phone pics and its specifications in this box in all pannels. -->
+							<center><img class="img-responsive" src="images\phones\oneplus5t.jpg">
+								<b> One Plus 5T <br></b>Price: $300
+							</center>
+							<button class="btn btn-primary form-control" type="button" value="Submit" data-toggle="modal" data-target="#pz" name="btn">Order Now!</button>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class=" col-md-4 col-sm-6 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Mobile 2</div>
+						<div class="panel-body">
+							<!--put mobile phone pics and its specifications in this box in all pannels. -->
+							<center><img class="img-responsive" src="images\phones\iphonex.jpg">
+								<b> Apple Iphone X <br></b>Price: $400
+							</center>
+							<button class="btn btn-primary form-control" type="button" value="Submit" name="btn" data-toggle="modal" data-target="#pz">Order Now!</button>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class=" col-md-4 col-sm-6 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Mobile 3</div>
+						<div class="panel-body">
+							<!--put mobile phone pics and its specifications in this box in all pannels. -->
+							<center><img class="img-responsive" src="images\phones\samsungs8.jpg">
+								<b> Samsung S8 <br></b>Price: $500
+							</center>
+							<button class="btn btn-primary form-control" type="button" value="Submit" name="btn" data-toggle="modal" data-target="#pz">Order Now!</button>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class=" col-md-4 col-sm-6 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Mobile 4</div>
+						<div class="panel-body">
+							<!--put mobile phone pics and its specifications in this box in all pannels. -->
+							<center><img class="img-responsive" src="images\phones\iphone7s.jpg">
+								<b> Apple Iphone 7S <br></b>Price: $600
+							</center>
+							<button class="btn btn-primary form-control" type="button" value="Submit" name="btn" data-toggle="modal" data-target="#pz">Order Now!</button>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class=" col-md-4 col-sm-6 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Mobile 5</div>
+						<div class="panel-body">
+							<!--put mobile phone pics and its specifications in this box in all pannels. -->
+							<center><img class="img-responsive" src="images\phones\oneplus3t.jpg">
+								<b> One Plus 3T <br></b>Price: $700
+							</center>
+							<button class="btn btn-primary form-control" type="button" value="Submit" name="btn" data-toggle="modal" data-target="#pz">Order Now!</button>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class=" col-md-4 col-sm-6 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Mobile 6</div>
+						<div class="panel-body">
+							<!--put mobile phone pics and its specifications in this box in all pannels. -->
+							<center><img class="img-responsive" src="images\phones\oppoa57.jpg">
+								<b> Oppo A57 <br></b>Price: $800
+							</center>
+							<button class="btn btn-primary form-control" type="button" value="Submit" name="btn" data-toggle="modal" data-target="#pz">Order Now!</button>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 1 PANNEL ENDS-->
+
+		<div style="background-color: #333; color:white ;">
+			<?php require 'foot.php' ?>
+		</div>
+
+
+
+	<?php } else {
+		require 'header_logged_in.php';
+	?>
+
+		<div class="container" style="margin-top: 60px;">
+			<b>
+				<?php
+				echo "Hi " . $_SESSION['name'];
+				?>
+			</b>
+		</div>
+
+		<!-- 2 PANNEL begins-->
+		<div class="container" style="margin-top: 50px; margin-bottom: 100px">
+			<div class="row row-style-login-page-pannel">
+				<div class=" col-md-4 col-sm-6 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Mobile 1</div>
+						<div class="panel-body">
+							<!--put mobile phone pics and its specifications in this box in all pannels. -->
+							<center><img class="img-responsive" src="images\phones\oneplus5t.jpg">
+								<b> One Plus 5T <br></b>Price: $300
+							</center>
+							<button class="btn btn-primary form-control" type="button" value="Submit" name="btn" data-toggle="modal" data-target="#all">Add to Cart</button>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class=" col-md-4 col-sm-6 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Mobile 2</div>
+						<div class="panel-body">
+							<!--put mobile phone pics and its specifications in this box in all pannels. -->
+							<center><img class="img-responsive" src="images\phones\iphonex.jpg">
+								<b> Apple Iphone X <br></b>Price: $400
+							</center>
+							<button class="btn btn-primary form-control" type="button" value="Submit" name="btn" data-toggle="modal" data-target="#all">Add to Cart</button>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class=" col-md-4 col-sm-6 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Mobile 3</div>
+						<div class="panel-body">
+							<!--put mobile phone pics and its specifications in this box in all pannels. -->
+							<center><img class="img-responsive" src="images\phones\samsungs8.jpg">
+								<b> Samsung S8 <br></b>Price: $500
+							</center>
+							<button class="btn btn-primary form-control" type="button" value="Submit" name="btn" data-toggle="modal" data-target="#all">Add to Cart</button>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class=" col-md-4 col-sm-6 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Mobile 4</div>
+						<div class="panel-body">
+							<!--put mobile phone pics and its specifications in this box in all pannels. -->
+							<center><img class="img-responsive" src="images\phones\iphone7s.jpg">
+								<b> Apple Iphone 7S <br></b>Price: $600
+							</center>
+							<button class="btn btn-primary form-control" type="button" value="Submit" name="btn" data-toggle="modal" data-target="#all">Add to Cart</button>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class=" col-md-4 col-sm-6 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Mobile 5</div>
+						<div class="panel-body">
+							<!--put mobile phone pics and its specifications in this box in all pannels. -->
+							<center><img class="img-responsive" src="images\phones\oneplus3t.jpg">
+								<b> One Plus 3T <br></b>Price: $700
+							</center>
+							<button class="btn btn-primary form-control" type="button" value="Submit" name="btn" data-toggle="modal" data-target="#all">Add to Cart</button>
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class=" col-md-4 col-sm-6 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Mobile 6</div>
+						<div class="panel-body">
+							<!--put mobile phone pics and its specifications in this box in all pannels. -->
+							<center><img class="img-responsive" src="images\phones\oppoa57.jpg">
+								<b> Oppo A57 <br></b>Price: $800
+							</center>
+							<button class="btn btn-primary form-control" type="button" value="Submit" name="btn" data-toggle="modal" data-target="#all">Add to Cart</button>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--2 PANNEL ENDS-->
+
+	<?php } ?>
+
+	<?php require 'login_modal.php'; ?>
+	<?php require 'add_to_cart.php'; ?>
+
+
+</body>
+
+</html> this is my index.php file. where do I put the HTML code you gave me? do i put it in my index.php file?
+It is difficult to say which way is the fewest lines of code without knowing the specific requirements and functionality of the e-commerce website you are building. However, one way to potentially reduce the number of lines of code would be to use a pre-built e-commerce platform such as Shopify or Magento, which will have many built-in features and functionalities that you can utilize, rather than building everything from scratch. Additionally, using a framework such as Laravel or Codeigniter can help in structuring your code and making it more organized and maintainable.
+
+
+
+
+bellkevin@pm.me
+the code above is my index.php file. where do I put the HTML code you gave me? do i put it in my index.php file?
+The HTML code I provided can be placed within the <body> tags of your index.php file. Make sure to place it where you want the form to appear on your website.
+It is also a good practice to separate the html and php code using template engine like twig or blade.
+
+
+
+
+bellkevin@pm.me
+the modal code i gave you is called add_to_cart.php
+Yes, you can put the HTML code I gave you in the add_to_cart.php file. The add_to_cart.php file is a separate PHP file that will be included in the index.php file when the user clicks the "Add to Cart" button. This way, when the user clicks the button, the modal will be displayed without reloading the entire page.
+
+You can use the include or require statement in your index.php file to include the add_to_cart.php file where you want the modal to appear.
+
+For example, you can include the add_to_cart.php file where you want the modal to appear in the index.php file using the following code:
+
+php
+Copy code
+include 'add_to_cart.php';
+You should also make sure that the jQuery and Bootstrap Javascript files are included in your index.php file in order to make the modal work properly.
+
+
+
+
+bellkevin@pm.me
+to which file do i add the JavaScript code you gave me?
+You should add the JavaScript code to your index.php file or a separate .js file and include it in the head or body of your index.php file using a script tag.
+
+For example, if you create a file named "main.js" and put the JavaScript code in it, you would include it in your index.php file like this:
+
+html
+Copy code
+<script src="main.js"></script>
+Make sure to include the script tag after the closing body tag, or in the head of your file, so that the script can have access to the elements on the page.
+
+
+
+
+bellkevin@pm.me
+$('#all').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget); // Button that triggered the modal
+    var productNumber = button.data('product-number'); // Extract info from data-* attributes
+    // Update the modal's input field with the product number
+    $(this).find('input[name="prodno"]').val(productNumber);
+}); say my product number is 1. what does this javascript code look like if my product number is 1?
+If your product number is 1, the JavaScript code would look like this:
+
+javascript
+Copy code
+$('#all').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget); // Button that triggered the modal
+    var productNumber = 1; // Extract info from data-* attributes
+    // Update the modal's input field with the product number
+    $(this).find('input[name="prodno"]').val(productNumber);
+});
+In this version of the code, the var productNumber = 1; line assigns the value of 1 to the variable productNumber. This means that the value of the modal's input field, input[name="prodno"], will be set to 1 when the modal is shown.
+
+
+
+
+bellkevin@pm.me
+using the code i gave you from index.php, show me the code for the javascript for main.js
+In your main.js file, you would add the following code:
+
+javascript
+Copy code
+$(document).ready(function() {
+    $('#all').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var productNumber = button.data('product-number'); // Extract info from data-* attributes
+        // Update the modal's input field with the product number
+        $(this).find('input[name="prodno"]').val(productNumber);
+    });
+});
+This code uses jQuery to listen for the 'show.bs.modal' event on the modal element with the ID of 'all'. When the event is triggered, the code will extract the product number from the data-* attribute of the button that triggered the modal, and then set the value of the input field with the name 'prodno' to the extracted product number.
+
+In your case, since the product number is 1, the following line of code will set the input field with the name 'prodno' to 1:
+
+javascript
+Copy code
+$(this).find('input[name="prodno"]').val(1);
+
+
+
+bellkevin@pm.me
+i got it to work. thank you
+You're welcome! I'm glad I could help. Let me know if you have any other questions or need further assistance.
