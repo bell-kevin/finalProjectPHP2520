@@ -1,6 +1,6 @@
 # Final Project Instructions
 
-Textbook: PHP and MySQL for Dynamic Web Sites: Visual QuickPro Guide (5th Edition) Written by Larry Ullman
+Textbook: PHP and MySQL for Dynamic Web Sites: Visual QuickPro Guide (Fifth Edition) Written by Larry Ullman
 
 Thoroughly read all of the instructions on this page before beginning your project.
 
