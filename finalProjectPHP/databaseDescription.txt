@@ -1,1 +1,0 @@
-i have a mysql database called ecommerce. it has 4 tables: orders, users, products, and users_products. i want to use orders, users, and products. i want to basically ignore users_products. the primary key for orders is order_id. the primary key for products is product_id. the primary key for users is id. the foreign keys for orders are id and product_id
