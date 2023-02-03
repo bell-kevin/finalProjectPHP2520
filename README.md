@@ -6,6 +6,8 @@ Thoroughly read all of the instructions on this page before beginning your proje
 
 See an instructor to ensure that you completely understand the Final Project for this course, and to discuss the details of the project you plan to create. Make sure to have instructor approval, then complete the project.
 
+Kevin's note: If I had to do this project over again, I would use a loop to access the database product information, and then display that info. on the product display page.
+
 ## Overview
 
 The final project for this course project will consist of the design, development, testing, and debugging of a database driven web application using PHP & MySQL. Develop a simple CMS or a web application of your choice. Choose an application of personal creative or professional interest. Note: Your project must demonstrate competency with the material covered in this course and must be discussed and approved in advance by an instructor.
