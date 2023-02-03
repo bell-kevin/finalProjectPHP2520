@@ -6,7 +6,7 @@ Thoroughly read all of the instructions on this page before beginning your proje
 
 See an instructor to ensure that you completely understand the Final Project for this course, and to discuss the details of the project you plan to create. Make sure to have instructor approval, then complete the project.
 
-Kevin's note: If I had to do this project over again, I would use a loop to access the database product information, and then display that info. on the product display page.
+Kevin's note: If I had to do this project over again, I would use a loop to access the database product information, and then display that info. on the product display page. I got a 90% grade.
 
 ## Overview
 
